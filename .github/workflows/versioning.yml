@@ -98,6 +98,9 @@ jobs:
           echo "Version: $version"
 
           git fetch origin $base_branch:$base_branch || true
+          git add .
+          git commit -am "Update version" || true
+          
           git checkout $base_branch || true
 
           git add .
